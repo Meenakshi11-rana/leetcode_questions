@@ -2,16 +2,18 @@ import java.util.*;
 class Solution {
     public int fib(int n) {
        
+       if(n<2){
+        return n;
+       }
         int a=0;
         int b=1;
-        for(int i=0;i<n;i++){
-            System.out.println(a+" ");
-
-            int c=a+b;
+        int c=0;
+        for(int i=2;i<=n;i++){
+            c=a+b;
             a=b;
             b=c;
         }
-        return a;
+        return c;
         //return fibo(n);
     //}        
     // public static int fibo(int n){
