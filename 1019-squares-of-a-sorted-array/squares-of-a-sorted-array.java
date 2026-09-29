@@ -12,25 +12,49 @@ class Solution {
 
         // return nums;
 
-        int n=nums.length;
-        int [] temp=new int[n];
-        int low=0;
-        int high=n-1;
-        while(low<=high){
-            int leftV=nums[low]*nums[low];
-            int rightV=nums[high]*nums[high];
-            if(leftV>rightV){
-                temp[n-1]=leftV;
-                low++;
-                n--;
-            }
-            else{
-                temp[n-1]=rightV;
-                n--;
-                high--;
+        //OPTIMAL APPROACH
+
+        // int n=nums.length;
+        // int [] temp=new int[n];
+        // int low=0;
+        // int high=n-1;
+        // while(low<=high){
+        //     int leftV=nums[low]*nums[low];
+        //     int rightV=nums[high]*nums[high];
+        //     if(leftV>rightV){
+        //         temp[n-1]=leftV;
+        //         low++;
+        //         n--;
+        //     }
+        //     else{
+        //         temp[n-1]=rightV;
+        //         n--;
+        //         high--;
+        //     }
+        // }
+        // return temp;
+
+         int n = nums.length;
+        int[] ans = new int[n];
+
+        int left = 0;
+        int right = n - 1;
+
+        for (int i = n - 1; i >= 0; i--) {
+
+            int leftSquare = nums[left] * nums[left];
+            int rightSquare = nums[right] * nums[right];
+
+            if (leftSquare > rightSquare) {
+                ans[i] = leftSquare;
+                left++;
+            } else {
+                ans[i] = rightSquare;
+                right--;
             }
         }
-        return temp;
+
+        return ans;
     }
 }
 
