@@ -16,12 +16,14 @@ class Solution {
     //     }
 
     //     return length;
-        s = s.trim();
+        // s = s.trim();
 
-        int lastSpace = s.lastIndexOf(" ");
+        // int lastSpace = s.lastIndexOf(" ");
 
-        return s.length() - lastSpace - 1;
-    }
+        // return s.length() - lastSpace - 1;
+        String[] words=s.trim().split(" ");
+        return words[words.length-1].length();
+            }
 }
 
 
