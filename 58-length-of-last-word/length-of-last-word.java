@@ -1,23 +1,29 @@
 class Solution {
     public int lengthOfLastWord(String s) {
-        int i = s.length() - 1;
+    //     int i = s.length() - 1;
 
-        // Skip spaces at the end
-        while (i >= 0 && s.charAt(i) == ' ') {
-            i--;
-        }
+    //     // Skip spaces at the end
+    //     while (i >= 0 && s.charAt(i) == ' ') {
+    //         i--;
+    //     }
 
-        int length = 0;
+    //     int length = 0;
 
-        // Count the last word
-        while (i >= 0 && s.charAt(i) != ' ') {
-            length++;
-            i--;
-        }
+    //     // Count the last word
+    //     while (i >= 0 && s.charAt(i) != ' ') {
+    //         length++;
+    //         i--;
+    //     }
 
-        return length;
+    //     return length;
+        s = s.trim();
+
+        int lastSpace = s.lastIndexOf(" ");
+
+        return s.length() - lastSpace - 1;
     }
 }
+
 
 // Synced seamlessly with LeetHub Pro
 // Pro features: https://bit.ly/leethubpro | Free version: https://bit.ly/leethubv4
