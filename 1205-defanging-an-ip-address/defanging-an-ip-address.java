@@ -1,24 +1,22 @@
 class Solution {
     public String defangIPaddr(String address) {
         //Approach 1
-        //return address.replace(".","[.]");
+        return address.replace(".","[.]");
         
         //Approach 2
-        String temp = "";
+    //     String temp = "";
 
-        for (int i = 0; i < address.length(); i++) {
+    //     for (int i = 0; i < address.length(); i++) {
 
-            if (address.charAt(i) == '.') {
-                temp = temp + "[.]";
-            } else {
-                temp = temp + address.charAt(i);
-            }
-        }
+    //         if (address.charAt(i) == '.') {
+    //             temp = temp + "[.]";
+    //         } else {
+    //             temp = temp + address.charAt(i);
+    //         }
+    //     }
 
-        return temp;
-
-        
-    }
+    //     return temp; 
+     }
 }
 
 // Synced seamlessly with LeetHub Pro
