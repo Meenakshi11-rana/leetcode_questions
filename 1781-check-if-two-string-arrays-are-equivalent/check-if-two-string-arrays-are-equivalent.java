@@ -13,12 +13,12 @@ class Solution {
 
 
         //APPROACH 2
-        String s1=String.join("",word1);
-        String s2=String.join("",word2);
-        return s1.equals(s2);
+        // String s1=String.join("",word1);
+        // String s2=String.join("",word2);
+        // return s1.equals(s2);
 
         //APPROACH 3
-        //return String.join("", word1).equals(String.join("", word2));
+        return String.join("", word1).equals(String.join("", word2));
     }
 
 }
