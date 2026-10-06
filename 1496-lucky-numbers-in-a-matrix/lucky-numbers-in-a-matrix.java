@@ -10,27 +10,24 @@ class Solution {
 
         for (int i = 0; i < n; i++) {
 
-            // Find minimum in this row
-            int rowMin = Integer.MAX_VALUE;
+
+            int min = Integer.MAX_VALUE;
 
             for (int j = 0; j < m; j++) {
-                rowMin = Math.min(rowMin, matrix[i][j]);
+                min = Math.min(min, matrix[i][j]);
             }
 
-            // Check every element in this row
             for (int j = 0; j < m; j++) {
 
-                if (matrix[i][j] == rowMin) {
+                if (matrix[i][j] == min) {
 
-                    // Find maximum in this column
-                    int colMax = Integer.MIN_VALUE;
+                    int max = Integer.MIN_VALUE;
 
                     for (int k = 0; k < n; k++) {
-                        colMax = Math.max(colMax, matrix[k][j]);
+                        max = Math.max(max, matrix[k][j]);
                     }
 
-                    // Lucky number
-                    if (matrix[i][j] == colMax) {
+                    if (matrix[i][j] == max) {
                         ans.add(matrix[i][j]);
                     }
                 }
